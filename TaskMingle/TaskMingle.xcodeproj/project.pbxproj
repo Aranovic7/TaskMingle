@@ -14,7 +14,7 @@
 		B0F9E3322B827E6400C08FD0 /* TaskMingleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3312B827E6400C08FD0 /* TaskMingleTests.swift */; };
 		B0F9E33C2B827E6400C08FD0 /* TaskMingleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E33B2B827E6400C08FD0 /* TaskMingleUITests.swift */; };
 		B0F9E33E2B827E6400C08FD0 /* TaskMingleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E33D2B827E6400C08FD0 /* TaskMingleUITestsLaunchTests.swift */; };
-		B0F9E34D2B82825B00C08FD0 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E34C2B82825B00C08FD0 /* SplashScreen.swift */; };
+		B0F9E34F2B828C6600C08FD0 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E34E2B828C6600C08FD0 /* StartScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		B0F9E3372B827E6400C08FD0 /* TaskMingleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskMingleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F9E33B2B827E6400C08FD0 /* TaskMingleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMingleUITests.swift; sourceTree = "<group>"; };
 		B0F9E33D2B827E6400C08FD0 /* TaskMingleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMingleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B0F9E34C2B82825B00C08FD0 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		B0F9E34E2B828C6600C08FD0 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 			children = (
 				B0F9E3202B827E6300C08FD0 /* TaskMingleApp.swift */,
 				B0F9E3222B827E6300C08FD0 /* ContentView.swift */,
-				B0F9E34C2B82825B00C08FD0 /* SplashScreen.swift */,
 				B0F9E3242B827E6400C08FD0 /* Assets.xcassets */,
+				B0F9E34E2B828C6600C08FD0 /* StartScreen.swift */,
 				B0F9E3262B827E6400C08FD0 /* Preview Content */,
 			);
 			path = TaskMingle;
@@ -260,9 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0F9E34D2B82825B00C08FD0 /* SplashScreen.swift in Sources */,
 				B0F9E3232B827E6300C08FD0 /* ContentView.swift in Sources */,
 				B0F9E3212B827E6300C08FD0 /* TaskMingleApp.swift in Sources */,
+				B0F9E34F2B828C6600C08FD0 /* StartScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
