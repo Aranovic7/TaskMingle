@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0216EA32B83D9BD0071DFB6 /* MainGoalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0216EA22B83D9BD0071DFB6 /* MainGoalScreen.swift */; };
 		B0F9E3212B827E6300C08FD0 /* TaskMingleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3202B827E6300C08FD0 /* TaskMingleApp.swift */; };
 		B0F9E3232B827E6300C08FD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3222B827E6300C08FD0 /* ContentView.swift */; };
 		B0F9E3252B827E6400C08FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F9E3242B827E6400C08FD0 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0216EA22B83D9BD0071DFB6 /* MainGoalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGoalScreen.swift; sourceTree = "<group>"; };
 		B0F9E31D2B827E6300C08FD0 /* TaskMingle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskMingle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F9E3202B827E6300C08FD0 /* TaskMingleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMingleApp.swift; sourceTree = "<group>"; };
 		B0F9E3222B827E6300C08FD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0216EA02B83D93B0071DFB6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B0F9E34E2B828C6600C08FD0 /* StartScreen.swift */,
+				B0216EA22B83D9BD0071DFB6 /* MainGoalScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		B0F9E3142B827E6300C08FD0 = {
 			isa = PBXGroup;
 			children = (
@@ -96,10 +107,10 @@
 		B0F9E31F2B827E6300C08FD0 /* TaskMingle */ = {
 			isa = PBXGroup;
 			children = (
+				B0216EA02B83D93B0071DFB6 /* Screens */,
 				B0F9E3202B827E6300C08FD0 /* TaskMingleApp.swift */,
 				B0F9E3222B827E6300C08FD0 /* ContentView.swift */,
 				B0F9E3242B827E6400C08FD0 /* Assets.xcassets */,
-				B0F9E34E2B828C6600C08FD0 /* StartScreen.swift */,
 				B0F9E3262B827E6400C08FD0 /* Preview Content */,
 			);
 			path = TaskMingle;
@@ -263,6 +274,7 @@
 				B0F9E3232B827E6300C08FD0 /* ContentView.swift in Sources */,
 				B0F9E3212B827E6300C08FD0 /* TaskMingleApp.swift in Sources */,
 				B0F9E34F2B828C6600C08FD0 /* StartScreen.swift in Sources */,
+				B0216EA32B83D9BD0071DFB6 /* MainGoalScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
