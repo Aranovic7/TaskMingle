@@ -17,7 +17,6 @@ struct MainGoalScreen: View {
                     .ignoresSafeArea()
                 
                 VStack{
-                    
                     Text("What is your main goal right now?")
                         .foregroundStyle(.white)
                         .font(.title)

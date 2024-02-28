@@ -7,7 +7,21 @@
 
 import SwiftUI
 
-struct SplashScreen: View {
+struct StartScreen: View {
+    
+    @State var showLoadingImage: Bool = true
+    @State var showSelectionImage: Bool = false
+    @State var showCompletionImage: Bool = false
+    
+    @State var showGymImage: Bool = false
+    @State var showReadingImage: Bool = false
+    @State var showSleepImage: Bool = false
+    @State var showMeditationImage: Bool = false
+    
+    @State var titleText: String = "Welcome to TaskMingle"
+    @State var descriptionText: String = "An app designed for whoever wants to change their life to become better using scientific based methods"
+    
+    
     var body: some View {
         
         VStack{
@@ -24,30 +38,79 @@ struct SplashScreen: View {
             
             VStack{
                 
-                Image("loadingIllustration")
-                    .padding()
+                if showLoadingImage == true {
+                    Image("loadingIllustration")
+                        .padding()
+                        .onAppear{
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                withAnimation{
+                                    showLoadingImage = false
+                                    showSelectionImage = true
+                                    updateTextForSelectionIllustration()
+                                }
+                            }
+                        }
+                } else if showSelectionImage == true {
+                        Image("SelectionIllustration")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding()
+                            .onAppear{
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                    withAnimation{
+                                        showSelectionImage = false
+                                        showCompletionImage = true
+                                        updateTextForCompletedIllustration()
+                                    }
+                                }
+                            }
+                } else if showCompletionImage {
+                    Image("CompletedIlustration")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding()
+                        .onAppear{
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                withAnimation{
+                                    showSelectionImage = false
+                                    showCompletionImage = true
+                                }
+                            }
+                        }
+                    
+                }
+               
+                HStack{
+                    Circle()
+                        .frame(width: 10, height: 10)
+                        .foregroundStyle(showLoadingImage ? Color.blue : Color.blue.opacity(0.3))
+                    Circle()
+                        .frame(width: 10, height: 10)
+                        .foregroundStyle(showSelectionImage ? Color.blue : Color.blue.opacity(0.3))
+                    Circle()
+                        .frame(width: 10, height: 10)
+                        .foregroundStyle(showCompletionImage ? Color.blue : Color.blue.opacity(0.3))
+                }
                 
-                Text("Get things done with TaskMingle")
+                Text(titleText)
                     .font(.title2)
                     .bold()
-                   
-                Text("TaskMingle is an app designed for whoever you are who wants to achive a more peaceful, happy and disciplined life. This app helps you with daily tasks, motivation, and much more thins! ")
                     .padding()
+                   
+                Text(descriptionText)
                     .font(.subheadline)
+                    .padding(.horizontal)
                 
                 Button(action: {
-                    print("button was pressed")
+                    print("hhh")
                 }, label: {
                     Text("Get Started")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .padding()
-                        .frame(width: 250, height: 50)
-                        .foregroundStyle(.white)
-                        .background(Color(red: 38/255, green: 170/255, blue: 197/255))
-                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 0)
+                        .foregroundColor(.white)
+                        .bold()
+                        .frame(width: 200, height: 50)
+                        .background(Color(red: 0.3647058824, green: 0.662745098, blue: 0.9509803922, opacity: 1))
                         .clipShape(.rect(cornerRadius: 10))
-                        .padding(.top, 20)
+                        .padding()
                 })
               
             }
@@ -55,11 +118,24 @@ struct SplashScreen: View {
             
             Spacer()
             
+            //NavigationLink(destination: MainGoalScreen() )
         }
+    }
+    
+    func updateTextForSelectionIllustration() {
+        titleText = "Pick your daily tasks"
+        descriptionText = "Choose what you want to upgrade in life, wether it's aiming for better sleep or becoming more disciplined"
+    }
+    
+    func updateTextForCompletedIllustration() {
+        titleText = "Complete your taks"
+        descriptionText = "Get a praise from your favorite celebrity for each task that you complete!"
     }
 }
 
+
+
 #Preview {
-    SplashScreen()
+    StartScreen()
 }
 
