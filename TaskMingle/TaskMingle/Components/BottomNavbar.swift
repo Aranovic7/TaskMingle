@@ -9,8 +9,31 @@ import SwiftUI
 
 struct BottomNavbar: View {
     var body: some View {
+        
         Divider()
+        
         HStack{
+            
+            Button {
+                
+            } label: {
+                
+                GeometryReader { geo in
+                    
+                    VStack(spacing: 4){
+                        
+                        Image(systemName: "calendar")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 24, height: 24)
+                        
+                        Text("Today")
+                    }
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .tint(.secondary)
+                    
+                }
+            }
             
             Button {
                 // switch to chats

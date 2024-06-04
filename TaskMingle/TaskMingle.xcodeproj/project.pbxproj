@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B0216EA32B83D9BD0071DFB6 /* MainGoalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0216EA22B83D9BD0071DFB6 /* MainGoalScreen.swift */; };
+		B03EEEC52C0F9B2E005B37D1 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03EEEC42C0F9B2E005B37D1 /* LandingPage.swift */; };
 		B06C60A52B94DF3B008FDED9 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06C60A42B94DF3B008FDED9 /* HomeScreen.swift */; };
 		B06C60AA2B94E0AE008FDED9 /* BottomNavbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06C60A92B94E0AE008FDED9 /* BottomNavbar.swift */; };
 		B0F9E3212B827E6300C08FD0 /* TaskMingleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3202B827E6300C08FD0 /* TaskMingleApp.swift */; };
@@ -17,7 +18,6 @@
 		B0F9E3322B827E6400C08FD0 /* TaskMingleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3312B827E6400C08FD0 /* TaskMingleTests.swift */; };
 		B0F9E33C2B827E6400C08FD0 /* TaskMingleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E33B2B827E6400C08FD0 /* TaskMingleUITests.swift */; };
 		B0F9E33E2B827E6400C08FD0 /* TaskMingleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E33D2B827E6400C08FD0 /* TaskMingleUITestsLaunchTests.swift */; };
-		B0F9E34F2B828C6600C08FD0 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E34E2B828C6600C08FD0 /* StartScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		B0216EA22B83D9BD0071DFB6 /* MainGoalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGoalScreen.swift; sourceTree = "<group>"; };
+		B03EEEC42C0F9B2E005B37D1 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 		B06C60A42B94DF3B008FDED9 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		B06C60A92B94E0AE008FDED9 /* BottomNavbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavbar.swift; sourceTree = "<group>"; };
 		B0F9E31D2B827E6300C08FD0 /* TaskMingle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskMingle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +52,6 @@
 		B0F9E3372B827E6400C08FD0 /* TaskMingleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskMingleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F9E33B2B827E6400C08FD0 /* TaskMingleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMingleUITests.swift; sourceTree = "<group>"; };
 		B0F9E33D2B827E6400C08FD0 /* TaskMingleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMingleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B0F9E34E2B828C6600C08FD0 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 		B06C60A72B94DF52008FDED9 /* UnAuthenticated */ = {
 			isa = PBXGroup;
 			children = (
-				B0F9E34E2B828C6600C08FD0 /* StartScreen.swift */,
+				B03EEEC42C0F9B2E005B37D1 /* LandingPage.swift */,
 			);
 			path = UnAuthenticated;
 			sourceTree = "<group>";
@@ -301,10 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03EEEC52C0F9B2E005B37D1 /* LandingPage.swift in Sources */,
 				B0F9E3232B827E6300C08FD0 /* ContentView.swift in Sources */,
 				B06C60A52B94DF3B008FDED9 /* HomeScreen.swift in Sources */,
 				B0F9E3212B827E6300C08FD0 /* TaskMingleApp.swift in Sources */,
-				B0F9E34F2B828C6600C08FD0 /* StartScreen.swift in Sources */,
 				B06C60AA2B94E0AE008FDED9 /* BottomNavbar.swift in Sources */,
 				B0216EA32B83D9BD0071DFB6 /* MainGoalScreen.swift in Sources */,
 			);
