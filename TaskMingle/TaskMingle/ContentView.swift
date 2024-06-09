@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var firebaseManager: FirebaseManager
+    
     var body: some View {
-        NavigationView{
+        NavigationStack{
             LandingPage()
+               
         }
         
     }
