@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct Task: Identifiable {
+    let id = UUID()
+    let systemImageName: String
+    let headline: String
+    let subheadline: String
+    let isCompleted: Bool
+    let priority: TaskPriority
+}
+
+enum TaskPriority {
+    case high, medium, low
+}

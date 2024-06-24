@@ -27,7 +27,7 @@ struct BottomNavbar: View {
                             .scaledToFit()
                             .frame(width: 24, height: 24)
                         
-                        Text("Today")
+                        Text("My tasks")
                     }
                     .frame(width: geo.size.width, height: geo.size.height)
                     .tint(.secondary)
@@ -59,25 +59,7 @@ struct BottomNavbar: View {
                 
             }
             
-            Button{
-                
-            } label: {
-                
-                GeometryReader { geo in
-                
-                    VStack(alignment: .center, spacing: 4){
-                        
-                        Image(systemName: "house.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 32, height: 32)
-                        
-                        Text("Home")
-                    }
-                    .frame(width: geo.size.width, height: geo.size.height)
-                    .tint(.secondary)
-                }
-            }
+
             
             Button {
                 

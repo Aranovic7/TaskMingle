@@ -15,6 +15,9 @@
 		B03EEEC52C0F9B2E005B37D1 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03EEEC42C0F9B2E005B37D1 /* LandingPage.swift */; };
 		B06C60A52B94DF3B008FDED9 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06C60A42B94DF3B008FDED9 /* HomeScreen.swift */; };
 		B06C60AA2B94E0AE008FDED9 /* BottomNavbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06C60A92B94E0AE008FDED9 /* BottomNavbar.swift */; };
+		B082B4032C24CACA00EDAB01 /* TaskComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082B4022C24CACA00EDAB01 /* TaskComponent.swift */; };
+		B082B4052C24CF2B00EDAB01 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082B4042C24CF2B00EDAB01 /* Task.swift */; };
+		B0DBF57D2C243BA500FA82F9 /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DBF57C2C243BA500FA82F9 /* ToDoView.swift */; };
 		B0E6E64F2C15BEDC00C0D5A2 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6E64E2C15BEDC00C0D5A2 /* RegisterView.swift */; };
 		B0E6E6522C15D9D300C0D5A2 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6E6512C15D9D300C0D5A2 /* FirebaseManager.swift */; };
 		B0F9E3212B827E6300C08FD0 /* TaskMingleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9E3202B827E6300C08FD0 /* TaskMingleApp.swift */; };
@@ -49,6 +52,9 @@
 		B03EEEC42C0F9B2E005B37D1 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 		B06C60A42B94DF3B008FDED9 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		B06C60A92B94E0AE008FDED9 /* BottomNavbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavbar.swift; sourceTree = "<group>"; };
+		B082B4022C24CACA00EDAB01 /* TaskComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskComponent.swift; sourceTree = "<group>"; };
+		B082B4042C24CF2B00EDAB01 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B0DBF57C2C243BA500FA82F9 /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		B0E6E64E2C15BEDC00C0D5A2 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		B0E6E6512C15D9D300C0D5A2 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		B0F9E31D2B827E6300C08FD0 /* TaskMingle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskMingle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				B06C60A92B94E0AE008FDED9 /* BottomNavbar.swift */,
+				B0DBF57C2C243BA500FA82F9 /* ToDoView.swift */,
+				B082B4022C24CACA00EDAB01 /* TaskComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -137,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B0E6E6512C15D9D300C0D5A2 /* FirebaseManager.swift */,
+				B082B4042C24CF2B00EDAB01 /* Task.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -343,11 +352,14 @@
 			files = (
 				B03EA5782C11C46D00ECFFC0 /* LoginView.swift in Sources */,
 				B03EEEC52C0F9B2E005B37D1 /* LandingPage.swift in Sources */,
+				B082B4032C24CACA00EDAB01 /* TaskComponent.swift in Sources */,
 				B0F9E3232B827E6300C08FD0 /* ContentView.swift in Sources */,
+				B082B4052C24CF2B00EDAB01 /* Task.swift in Sources */,
 				B0E6E64F2C15BEDC00C0D5A2 /* RegisterView.swift in Sources */,
 				B0E6E6522C15D9D300C0D5A2 /* FirebaseManager.swift in Sources */,
 				B06C60A52B94DF3B008FDED9 /* HomeScreen.swift in Sources */,
 				B0F9E3212B827E6300C08FD0 /* TaskMingleApp.swift in Sources */,
+				B0DBF57D2C243BA500FA82F9 /* ToDoView.swift in Sources */,
 				B06C60AA2B94E0AE008FDED9 /* BottomNavbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
