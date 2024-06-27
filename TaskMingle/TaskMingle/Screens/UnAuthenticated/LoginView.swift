@@ -11,7 +11,7 @@ struct LoginView: View {
     
     @State var email: String = ""
     @State var password: String = ""
-   
+    @State private var isSignedIn = false
     
     var body: some View {
         VStack{
@@ -40,21 +40,39 @@ struct LoginView: View {
                 .padding(.bottom, 20)
                 .padding()
             
-            Button(action: {
-                // Handle login action here
-                print("Login button tapped")
-            }) {
-                Text("Sign in")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 220, height: 50)
-                    .background(
-                        LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .leading, endPoint: .trailing)
-                    )
-                    .cornerRadius(25)
-                
-            }
+//            Button(action: {
+//                // Handle login action here
+//                print("Login button tapped")
+//            }) {
+//                Text("Sign in")
+//                    .font(.headline)
+//                    .foregroundColor(.white)
+//                    .padding()
+//                    .frame(width: 220, height: 50)
+//                    .background(
+//                        LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .leading, endPoint: .trailing)
+//                    )
+//                    .cornerRadius(25)
+//                
+//            }
+            
+            NavigationLink(destination: HomeScreen(), isActive: $isSignedIn) {
+                        Button(action: {
+                           
+                            isSignedIn = true
+                            print("isSignedIn: \(isSignedIn)")
+                        }) {
+                            Text("Sign in")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .frame(width: 220, height: 50)
+                                .background(
+                                    LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .leading, endPoint: .trailing)
+                                )
+                                .cornerRadius(25)
+                        }
+                    }
             
             
             HStack{

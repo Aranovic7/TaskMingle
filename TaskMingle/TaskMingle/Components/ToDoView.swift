@@ -32,6 +32,10 @@ struct ToDoView: View {
                 .padding(.top, 20)
             
             Spacer()
+            
+            NavigationLink(destination: NewTaskView(tasks: $tasks)) {
+                NewTaskBtn()
+            }
         }
     }
 }
@@ -86,6 +90,10 @@ struct TaskListView: View {
                 .shadow(color: task.id == tasks.first?.id ? Color.black.opacity(0.2) : Color.clear, radius: 20, x: 5, y: 5)
             }
             .padding(.horizontal)
+            
+           
+            
+            
         }
     }
 }

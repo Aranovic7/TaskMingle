@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B027518C2C2D993000BAE6C3 /* NewTaskBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027518B2C2D993000BAE6C3 /* NewTaskBtn.swift */; };
+		B027518E2C2D9A9200BAE6C3 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027518D2C2D9A9200BAE6C3 /* NewTaskView.swift */; };
 		B03EA56E2C11C12400ECFFC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B03EA56D2C11C12400ECFFC0 /* GoogleService-Info.plist */; };
 		B03EA5722C11C25C00ECFFC0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B03EA5712C11C25C00ECFFC0 /* FirebaseFirestore */; };
 		B03EA5742C11C26400ECFFC0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B03EA5732C11C26400ECFFC0 /* FirebaseAuth */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B027518B2C2D993000BAE6C3 /* NewTaskBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskBtn.swift; sourceTree = "<group>"; };
+		B027518D2C2D9A9200BAE6C3 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		B03EA56D2C11C12400ECFFC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B03EA5772C11C46D00ECFFC0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B03EEEC42C0F9B2E005B37D1 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				B06C60A92B94E0AE008FDED9 /* BottomNavbar.swift */,
 				B0DBF57C2C243BA500FA82F9 /* ToDoView.swift */,
 				B082B4022C24CACA00EDAB01 /* TaskComponent.swift */,
+				B027518B2C2D993000BAE6C3 /* NewTaskBtn.swift */,
+				B027518D2C2D9A9200BAE6C3 /* NewTaskView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -354,9 +360,11 @@
 				B03EEEC52C0F9B2E005B37D1 /* LandingPage.swift in Sources */,
 				B082B4032C24CACA00EDAB01 /* TaskComponent.swift in Sources */,
 				B0F9E3232B827E6300C08FD0 /* ContentView.swift in Sources */,
+				B027518C2C2D993000BAE6C3 /* NewTaskBtn.swift in Sources */,
 				B082B4052C24CF2B00EDAB01 /* Task.swift in Sources */,
 				B0E6E64F2C15BEDC00C0D5A2 /* RegisterView.swift in Sources */,
 				B0E6E6522C15D9D300C0D5A2 /* FirebaseManager.swift in Sources */,
+				B027518E2C2D9A9200BAE6C3 /* NewTaskView.swift in Sources */,
 				B06C60A52B94DF3B008FDED9 /* HomeScreen.swift in Sources */,
 				B0F9E3212B827E6300C08FD0 /* TaskMingleApp.swift in Sources */,
 				B0DBF57D2C243BA500FA82F9 /* ToDoView.swift in Sources */,
