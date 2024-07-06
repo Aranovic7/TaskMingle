@@ -8,6 +8,8 @@ import SwiftUI
 
 struct ToDoView: View {
     
+    // TODO - Man kanske kan skriva ned antalet timmar / dagar kvar som man har på sig att slutföra uppgiften
+    
     // Example list of tasks
     @State private var tasks = [
         Task(systemImageName: "books.vertical.fill", headline: "Read a book", subheadline: "Read 10 pages of a book", isCompleted: true, priority: .low),
@@ -33,7 +35,7 @@ struct ToDoView: View {
             
             Spacer()
             
-            NavigationLink(destination: NewTaskView(tasks: $tasks)) {
+            NavigationLink(destination: NewTaskView()) {
                 NewTaskBtn()
             }
         }

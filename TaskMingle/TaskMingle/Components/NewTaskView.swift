@@ -7,58 +7,136 @@
 
 import SwiftUI
 
-struct NewTaskView: View {
-    
-    @Binding var tasks: [Task]
-    
-    @State private var systemImageName = ""
-    @State private var headline = ""
-    @State private var subheadline = ""
-    @State private var priority = TaskPriority.low
+struct SectionView: View {
+    let emoji: String
+    let title: String
+    let isExpanded: Bool
+    let toggleExpanded: (() -> Void)?
     
     var body: some View {
-        VStack {
-                   TextField("Icon Name", text: $systemImageName)
-                       .padding()
-                       .background(Color.gray.opacity(0.2))
-                       .cornerRadius(5)
-                   
-                   TextField("Headline", text: $headline)
-                       .padding()
-                       .background(Color.gray.opacity(0.2))
-                       .cornerRadius(5)
-                   
-                   TextField("Subheadline", text: $subheadline)
-                       .padding()
-                       .background(Color.gray.opacity(0.2))
-                       .cornerRadius(5)
-                   
-                   Picker("Priority", selection: $priority) {
-                       Text("Low").tag(TaskPriority.low)
-                       Text("Medium").tag(TaskPriority.medium)
-                       Text("High").tag(TaskPriority.high)
-                   }
-                   .pickerStyle(SegmentedPickerStyle())
-                   .padding()
-                   
-                   Button(action: {
-                       let newTask = Task(systemImageName: systemImageName, headline: headline, subheadline: subheadline, isCompleted: false, priority: priority)
-                       tasks.append(newTask)
-                   }) {
-                       Text("Add Task")
-                           .foregroundColor(.white)
-                           .padding()
-                           .background(Color.blue)
-                           .cornerRadius(10)
-                   }
-                   .padding()
-                   
-                   Spacer()
-               }
-               .padding()
+        HStack{
+            Text(emoji)
+                .font(.title)
+                .padding(.leading)
+            
+            Text(title)
+                .bold()
+            
+            Spacer()
+            
+            if let toggle = toggleExpanded {
+                Button(action: {
+                    toggle()
+                }) {
+                    Image(systemName: isExpanded ? "chevron.down" : "chevron.up")
+                        .foregroundStyle(Color.black)
+                        .padding()
+                }
+            } else {
+                Image(systemName: "chevron.right")
+                    .padding()
+            }
+        }
     }
 }
 
+struct NewTaskView: View {
+    
+    @State private var showBuild: Bool = true
+    @State private var expandedSection: String? = nil
+    
+    var body: some View {
+        VStack {
+            
+            Text("New task")
+                .bold()
+              
+            
+            HStack(spacing: 0){
+                ZStack{
+                    
+                    HStack(spacing: 0){
+                        
+                        Button(action: {
+                            showBuild = true
+                        }, label: {
+                            Text("Build")
+                                .foregroundStyle(showBuild ? Color.white : Color.gray.opacity(0.6))
+                                .frame(width: 175, height: 30)
+                                .background(
+                                    showBuild ?
+                                    AnyView(
+                                        LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.7), Color.blue]), startPoint: .leading, endPoint: .trailing)
+                                    )
+                                    :
+                                        AnyView(
+                                            Color.gray.opacity(0.2)
+                                        )
+                                )
+                                .cornerRadius(20)
+                        })
+                        
+                        
+                        Button(action: {
+                            showBuild = false
+                        }, label: {
+                            Text("Quit")
+                                .foregroundStyle(showBuild ? Color.gray.opacity(0.6) : Color.white)
+                                .frame(width: 175, height: 30)
+                                .background(
+                                    showBuild ?
+                                    AnyView(
+                                        Color.gray.opacity(0.2)
+                                    )
+                                    :
+                                        AnyView(
+                                            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.7), Color.blue]), startPoint: .leading, endPoint: .trailing)
+                                        )
+                                )
+                                .cornerRadius(20)
+                        })
+                    }
+                    
+                }
+            }
+            
+            if showBuild {
+                
+                SectionView(emoji: "🏋️‍♀️", title: "Sports", isExpanded: expandedSection == "Sports", toggleExpanded: { toggleSection("Sports") })
+                SectionView(emoji: "🧘‍♀️", title: "Mindfulness", isExpanded: expandedSection == "Mindfulness", toggleExpanded: { toggleSection("Mindfulness") })
+                SectionView(emoji: "🫀", title: "Health", isExpanded: expandedSection == "Health", toggleExpanded: { toggleSection("Health") })
+                SectionView(emoji: "✨", title: "Life", isExpanded: expandedSection == "Life", toggleExpanded: { toggleSection("Life") })
+
+                
+            } else {
+
+                SectionView(emoji: "🚭", title: "Smoke less", isExpanded: false, toggleExpanded: nil)
+                SectionView(emoji: "🥃", title: "Drink less alcohol", isExpanded: false, toggleExpanded: nil)
+                SectionView(emoji: "💰", title: "Spend less", isExpanded: false, toggleExpanded: nil)
+                SectionView(emoji: "📱", title: "Less social app", isExpanded: false, toggleExpanded: nil)
+                SectionView(emoji: "🧼", title: "Bad hygiene", isExpanded: false, toggleExpanded: nil)
+                SectionView(emoji: "☕️", title: "Drink less caffeine", isExpanded: false, toggleExpanded: nil)
+                SectionView(emoji: "🍕", title: "Bad cost", isExpanded: false, toggleExpanded: nil)
+
+            }
+            
+            Spacer()
+            
+            NewCustomTaskBtn()
+                .padding(.bottom, 30)
+        }
+    }
+    
+    private func toggleSection(_ section: String) {
+           if expandedSection == section {
+               expandedSection = nil
+           } else {
+               expandedSection = section
+           }
+       }
+    
+}
+
 #Preview {
-    NewTaskView(tasks: .constant([]))
+    NewTaskView()
 }
